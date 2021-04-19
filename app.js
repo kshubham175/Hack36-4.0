@@ -20,7 +20,7 @@ const userRoutes = require('./routes/users');
 const campgroundRoutes = require('./routes/campgrounds');
 const reviewRoutes = require('./routes/reviews');
 
-mongoose.connect('mongodb://localhost:27017/hack1', {
+mongoose.connect('mongodb://localhost:27017/hack4', {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
@@ -74,14 +74,22 @@ app.use((req, res, next) => {
 
 
 app.use('/', userRoutes);
-app.use('/campgrounds', campgroundRoutes)
-app.use('/campgrounds/:id/reviews', reviewRoutes)
+app.use('/blogs', campgroundRoutes)
+app.use('/blogs/:id/reviews', reviewRoutes)
 
 
 app.get('/', (req, res) => {
     res.render('home')
 });
-
+app.get('/home', (req, res) => {
+    res.render('home')
+});
+app.get('/about', (req, res) => {
+    res.render('about');
+   });
+   app.get('/team', (req, res) => {
+    res.render('team')
+});   
 
 app.all('*', (req, res, next) => {
     next(new ExpressError('Page Not Found', 404))

@@ -5,24 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feminista</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
 </head>
 <style>
+    a{
+        color: rgb(2, 12, 9);
+    }
     body{
         width: 100%;
-        background-color: rgb(160, 54, 160);
+        background-color:  #48209eb2;
         padding: 0;
         margin: 0;
     }
-    h1{
+    h3{
         margin: 0px;
+        margin-bottom: -20px;
         padding: 15px;
-        background-color: rgb(66, 3, 66);
+        background-color: rgb(132 47 49 / 28%);
         font-family: Monsterrat;
         font-size: 200%;
-        color:whitesmoke;   
+        color:whitesmoke;  
+
          
     }
-    a{
+    button{
+        background: transparent;
+        size:150%;
+        border:0px;
+    }
+   a{
         margin-left:15px ;
     }
     #quote{
@@ -40,13 +52,19 @@
     }
     p{
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 175%;padding: 0;margin: 0;color:rgb(10, 9, 1);
+        font-size: 175%;padding: 0;margin: 0;color:rgb(236, 211, 22);
         z-index: 10;
     }
     p:hover{
         color:black;
     }
+    .home{
+        border: 1px solid rgb(41, 6, 41);
+        border-radius: 20px;
+    }
     .home:hover{
+        border: 1px dashed burlywood;
+        border-radius: 20px;
         background-color: rgb(142, 125, 150);
         
     }
@@ -58,17 +76,19 @@ background-repeat:no-repeat;background-size: cover;
 overflow: hidden;
 background-attachment: fixed;">-->
 <body>
-    <h1>
+    <h3>
         <b>
-        <a     >Home</a></b>
+        <a  href="/home"    >Home</a></b>
 
-        <a     >About</a>
-        <a     >Blogs</a>
-        <a>Team</a>
-        <a   style="float:right">Login</a>
+        <a   href="/about"   >About</a>
+        <a   href="/blogs"   >Read Blogs</a>
+        <a href="/team" >Team</a>
+        <a  href="/login" style="float:right">Login</a>
+        <a href="/register"   style="float:right">Register</a>
         
-    </h1>
-    <section style="width: 70%;margin: 20px auto;text-align: right; padding: 10px;
+    </h3>
+    <div style="background-image: url('images/about.jpg');background-repeat: no-repeat;background-size: cover;">
+    <section style="width: 70%;margin: 20px auto;text-align: center; padding: 10px;
     background-image: url('images/routes(1).png');
             background-repeat: no-repeat;  background-size: cover;">
        
@@ -79,15 +99,16 @@ background-attachment: fixed;">-->
                 Dwell into some of the experiences shared by women across the globe 
                 or venture an experience of yours upon the rest of womankid.
             </p>
-            <button>Click here</button>
+            <button><a href="/blogs">Click here</a></button>
         </div>
+        <br>
             <div class="home" style=" width: 50%;margin-left:50%;">
             <h2>ROUTES</h2>
             <p>
               Travelling to a new Place, check out the safe possible routes 
               and what other women had experienced on the way.
             </p>
-            <button>Click here</button>
+            <button><a href="/blogs">Click here</a></button>
         </div>
 
     </section>
@@ -106,6 +127,14 @@ background-attachment: fixed;">-->
     </div>
 
 </section>
+</div>
+<footer class="footer bg-dark py-3 mt-auto">
+    <div class="container">
+        <span class="text-muted">&copy; hack36 2021</span>
+    </div>
+</footer>
+
+
 </body>
 
 </html>
